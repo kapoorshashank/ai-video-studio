@@ -1,29 +1,58 @@
-# AI Video Studio
+# ✨ AI Video Studio
 
-Initial monorepo foundation for AI Video Studio. It contains a standalone Angular frontend and a NestJS API. The UI is intentionally limited to a prompt field, a non-functional **Generate Video** button, and a live backend health indicator.
+### From creative prompts to cinematic possibilities.
 
-## Prerequisites
+AI Video Studio is a monorepo foundation for exploring **AI-powered video creation**. It includes an Angular frontend and a NestJS API, ready to grow into a creative space for transforming ideas into visual stories.
+
+> **Imagine it. Prompt it. Create with AI.**
+
+## 🎬 The experience today
+
+The frontend currently includes:
+
+- A prompt field for entering a video idea
+- A **Generate Video** button
+- A live indicator for backend health
+
+The backend currently provides a health-check endpoint. Video generation and other AI capabilities are future possibilities—not implemented features.
+
+## 🧠 AI concepts & skills
+
+The project is designed to grow around ideas such as:
+
+- **Generative AI** and **text-to-video**
+- **Prompt engineering** and creative direction
+- **Multimodal AI** for combining text, images, and motion
+- **AI workflow orchestration** and asynchronous jobs
+- **Media processing** and video asset management
+
+## 🛠️ Tech stack
+
+- **Angular** — frontend application
+- **NestJS** — backend API
+- **TypeScript** — across the application
+- **npm workspaces** — monorepo dependency and script management
+
+## ✅ Prerequisites
 
 - Node.js 20.19 or newer (Node.js 22 LTS recommended)
 - npm 10 or newer
 
-## Install dependencies
+## 🚀 Get started
 
-From the repository root:
+Install dependencies from the repository root:
 
 ```bash
 npm install
 ```
 
-## Run the backend
-
-In one terminal, from the repository root:
+Start the backend in one terminal:
 
 ```bash
 npm run start:backend
 ```
 
-The NestJS API listens on `http://localhost:3000`. Confirm it is running with:
+The API listens on `http://localhost:3000`. Check its health:
 
 ```bash
 curl http://localhost:3000/api/health
@@ -35,17 +64,15 @@ Expected response:
 { "status": "ok" }
 ```
 
-## Run the frontend
-
-In a second terminal, from the repository root:
+Start the frontend in a second terminal:
 
 ```bash
 npm run start:frontend
 ```
 
-Open `http://localhost:4200`. The home page calls `/api/health`; Angular's development server proxies that path to the local NestJS server.
+Open `http://localhost:4200`. During development, Angular proxies `/api` requests to the local NestJS server.
 
-## Build
+## 🏗️ Build
 
 Build both workspaces:
 
@@ -53,18 +80,22 @@ Build both workspaces:
 npm run build
 ```
 
-Or build a workspace independently:
+Or build each workspace independently:
 
 ```bash
 npm run build --workspace=frontend
 npm run build --workspace=backend
 ```
 
-## Structure
+## 📁 Project structure
 
 ```text
 frontend/  Angular application and presentation layer
 backend/   NestJS HTTP API, organized by feature modules
 ```
 
-The backend starts with a dedicated health feature module so future capabilities—authentication, provider orchestration, jobs, data, storage, media processing, and billing—can be added as isolated modules without coupling them to the HTTP bootstrap.
+The backend begins with a dedicated health feature module. Future features—such as authentication, AI provider orchestration, jobs, storage, media processing, and billing—can be added as isolated modules.
+
+---
+
+**Big ideas deserve a great first frame.** 🎥
