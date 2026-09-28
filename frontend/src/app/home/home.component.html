@@ -1,0 +1,91 @@
+<main class="studio-shell">
+  <section class="studio-card" aria-labelledby="page-title">
+    <p class="eyebrow">CREATE</p>
+
+    <h1 id="page-title">AI Video Studio</h1>
+
+    <p class="intro">
+      Turn an idea into a video.
+    </p>
+
+    <label for="video-prompt">
+      Describe the video you want to create
+    </label>
+
+    <textarea
+      id="video-prompt"
+      name="video-prompt"
+      #prompt
+      rows="6"
+      placeholder="A cinematic aerial view of a coastline at sunrise…"
+    ></textarea>
+
+    <h3>Format</h3>
+
+    <div>
+      <button
+        type="button"
+        [disabled]="selectedAspectRatio === '16:9'"
+        (click)="selectedAspectRatio = '16:9'"
+      >
+        Landscape 16:9
+      </button>
+
+      <button
+        type="button"
+        [disabled]="selectedAspectRatio === '9:16'"
+        (click)="selectedAspectRatio = '9:16'"
+      >
+        Portrait 9:16
+      </button>
+    </div>
+
+    <h3>Duration</h3>
+
+    <div>
+      <button
+        type="button"
+        [disabled]="selectedDuration === 5"
+        (click)="selectedDuration = 5"
+      >
+        5 seconds
+      </button>
+
+      <button
+        type="button"
+        [disabled]="selectedDuration === 10"
+        (click)="selectedDuration = 10"
+      >
+        10 seconds
+      </button>
+    </div>
+
+    <button
+      type="button"
+      (click)="generateVideo(prompt.value)"
+    >
+      Generate Video
+    </button>
+
+    <p class="health-status" role="status">
+      {{ generationStatus }}
+    </p>
+
+    <p class="health-status" role="status">
+      {{ healthStatus }}
+    </p>
+
+    <div *ngIf="videoUrl" class="video-result">
+      <h3>Generated Video</h3>
+
+      <video
+        [src]="videoUrl"
+        controls
+        autoplay
+        playsinline
+        preload="metadata"
+        style="width: 100%; max-width: 832px;"
+      ></video>
+    </div>
+  </section>
+</main>

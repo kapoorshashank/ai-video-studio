@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build and test output
+dist/
+coverage/
+*.tsbuildinfo
+
+# Angular cache
+.angular/
+
+# Environment and local files
+.env
+.env.*
+!.env.example
+*.log
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

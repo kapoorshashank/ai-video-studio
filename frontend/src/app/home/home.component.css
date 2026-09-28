@@ -1,0 +1,73 @@
+.studio-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #233b72, #0b1020 55%);
+}
+
+.studio-card {
+  width: min(100%, 680px);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid #35466e;
+  border-radius: 1.25rem;
+  background: rgb(15 23 42 / 88%);
+  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 28%);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #8ab4ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+.intro {
+  margin: 1rem 0 2rem;
+  color: #b8c4da;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  padding: 0.9rem 1rem;
+  border: 1px solid #52668f;
+  border-radius: 0.75rem;
+  color: inherit;
+  background: #111a30;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.1rem;
+  border: 0;
+  border-radius: 0.75rem;
+  color: #071121;
+  background: #86b5ff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b0ceff;
+}
+
+.health-status {
+  min-height: 1.5rem;
+  margin: 1.25rem 0 0;
+  color: #b8c4da;
+  font-size: 0.9rem;
+}
